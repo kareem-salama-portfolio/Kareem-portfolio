@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Kareem Salama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            padding-top: 5vh;
+        }
+
+        /* عنوان ضخم ومضيء مثل صفحة التواصل */
+        h1 {
+            font-size: 5rem;
+            color: #d1ffed;
+            text-shadow: 0 0 30px #00ff9f;
+            margin-bottom: 30px;
+            letter-spacing: 10px;
+            font-weight: 900;
+        }
+
+        /* حاوية المحتوى الاحترافية */
+        .content-wrapper {
+            max-width: 1000px;
+            width: 90%;
+            background: rgba(10, 10, 10, 0.8);
+            border: 2px solid #00ff9f;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 50px rgba(0, 255, 159, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .terminal-header {
+            border-bottom: 1px solid #333;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+
+        .about-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .highlight { color: #00ff9f; font-weight: bold; }
+
+        /* شبكة المهارات */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #00ff9f;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            background: #1a1a1a;
+            box-shadow: 0 5px 15px rgba(0, 255, 159, 0.2);
+        }
+
+        .skill-card i {
+            font-size: 2rem;
+            color: #00ff9f;
+            margin-bottom: 15px;
+        }
+
+        .back-btn {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border: 3px solid #00ff9f;
+            padding: 15px 40px;
+            border-radius: 50px;
+            color: #00ff9f;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .back-btn:hover {
+            background: #00ff9f;
+            color: #000;
+            box-shadow: 0 0 40px #00ff9f;
+        }
+
+        /* موبايل Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; letter-spacing: 4px; }
+            .about-text { font-size: 1.1rem; }
+            .content-wrapper { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ABOUT ME</h1>
+
+    <div class="content-wrapper">
+        <div class="terminal-header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+        </div>
+
+        <div class="about-text">
+            <p><span class="highlight">visitor@kareem:~$</span> whoami</p>
+            <p>I am <span class="highlight">Kareem Salama</span>, a tech-driven student specializing in <span class="highlight">Cyber Security</span> and <span class="highlight">AI Engineering</span>. My passion lies in creating secure digital environments and building intelligent systems that define the future.</p>
+            
+            <p style="margin-top: 20px;"><span class="highlight">visitor@kareem:~$</span> system --status</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-solid fa-shield-virus"></i>
+                <h3>Cyber Security</h3>
+                <p>Protecting data and testing system vulnerabilities.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-brain"></i>
+                <h3>AI & ML</h3>
+                <p>Developing smart algorithms and neural networks.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Programming</h3>
+                <p>Writing clean, efficient code in C++ and Python.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-network-wired"></i>
+                <h3>Networking</h3>
+                <p>Designing and securing complex network infrastructures.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="../index.html" class="back-btn">
+       ← ACCESS MAIN SYSTEM
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+/* --- إعدادات الجسم الأساسية --- */
+body {
+    margin: 0;
+    font-family: 'monospace';
+    background: #0a0a0a;
+    color: #00ff9f;
+    overflow-x: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* --- الهيدر (Nav) --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #00ff9f;
+    background: rgba(10, 10, 10, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 20px; 
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #00ff9f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-shadow: 0 0 10px #00ff9f;
+}
+
+/* --- الأقسام الأساسية --- */
+.hero, .terminal, #projects, #research, #chatbot {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    background: rgba(10, 10, 10, 0.5);
+    text-align: center;
+}
+
+.terminal {
+    background: black;
+    border: 1px solid #00ff9f;
+    margin: 30px auto;
+    max-width: 850px;
+    text-align: left;
+}
+
+.card {
+    border: 1px solid #00ff9f;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    transition: transform 0.3s;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: left;
+}
+
+.card:hover { 
+    transform: scale(1.03); 
+    background: rgba(0, 255, 159, 0.1); 
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #fff;
+    text-shadow: 0 0 5px #00ff9f;
+}
+
+button {
+    background: #00ff9f;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    box-shadow: 0 0 20px #00ff9f;
+    transform: translateY(-2px);
+}
+
+/* --- صورة البروفايل --- */
+.profile-img {
+    image-rendering: -webkit-optimize-contrast; 
+    filter: brightness(1.1) contrast(1.2);
+    width: 250px;                 
+    height: 250px;
+    object-fit: cover;          
+    border-radius: 50%;        
+    border: 5px solid #00ff9f;   
+    outline: 3px solid white;    
+    outline-offset: 5px;        
+    box-shadow: 0 0 20px #00ff9f, 0 0 40px rgba(0, 255, 159, 0.2);
+    display: block;
+    margin: 10px auto 20px auto; 
+    transition: all 0.4s ease;   
+}
+
+.profile-img:hover {
+    transform: scale(1.05);    
+    outline-offset: 0px;         
+    box-shadow: 0 0 50px #00ff9f; 
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+/* --- الشات بوت --- */
+#chatbot input {
+    padding: 10px;
+    width: 60%;
+    background: #000;
+    border: 1px solid #00ff9f;
+    color: #00ff9f;
+    outline: none;
+}
+
+#answer {
+    margin-top: 15px;
+    font-style: italic;
+    min-height: 20px;
+}
+
+/* --- تعديلات الموبايل القاتلة (Media Query) --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column !important; 
+        gap: 12px !important;
+        padding: 10px 5px !important;
+    }
+
+    nav ul { 
+        display: flex !important; 
+        flex-direction: row !important; 
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem !important;
+        border: 1px solid rgba(0, 255, 159, 0.3);
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+
+    .profile-img {
+        width: 140px !important;     
+        height: 140px !important;
+        outline-offset: 3px !important;
+    }
+
+    h1 {
+        font-size: 1.6rem !important;
+    }
+
+    .hero, .terminal, #projects, #research, #chatbot {
+        padding: 20px 10px !important;
+    }
+
+    .terminal, .card {
+        width: 92% !important;
+        margin: 10px auto !important;
+        font-size: 13px;
+    }
+
+    #chatbot input {
+        width: 80%;
+    }
+}

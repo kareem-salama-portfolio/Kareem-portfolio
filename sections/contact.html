@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Kareem Salama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* بيخلي المحتوى يبدأ من فوق */
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 5vh; /* بيتحكم في طلوعه لفوق - صغره عشان يطلع أكتر */
+        }
+
+        /* تكبير العنوان وزيادة السطوع */
+        h1 {
+            font-size: 6.5rem; /* أكبر من الأول */
+            color: #d1ffed;
+            text-shadow: 0 0 40px #00ff9f, 0 0 70px #00ff9f; /* سطوع مضاعف */
+            margin-bottom: 5px;
+            letter-spacing: 8px;
+            font-weight: 900;
+        }
+
+        p {
+            font-size: 1.8rem; /* تكبير الكلام اللي تحت العنوان */
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            margin-bottom: 40px;
+        }
+
+        .icons-wrapper {
+            display: flex;
+            gap: 45px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .icon-link {
+            font-size: 95px; /* أيقونات أضخم */
+            color: #00ff9f;
+            text-decoration: none;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: drop-shadow(0 0 15px rgba(0, 255, 159, 0.5));
+        }
+
+        .icon-link:hover {
+            transform: scale(1.2) translateY(-10px);
+            filter: drop-shadow(0 0 40px #00ff9f); /* سطوع جبار عند اللمس */
+        }
+
+        .back-btn {
+            border: 3px solid #00ff9f; /* سمك الإطار أكتر */
+            padding: 18px 50px;
+            border-radius: 50px;
+            color: #00ff9f;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.3rem; /* تكبير خط الزرار */
+            transition: 0.3s;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(0, 255, 159, 0.4);
+        }
+
+        .back-btn:hover {
+            background: #00ff9f;
+            color: #000;
+            box-shadow: 0 0 50px #00ff9f;
+        }
+
+        /* ضبط الموبايل عشان ميبوظش من التكبير */
+        @media (max-width: 768px) {
+            body { padding-top: 10vh; }
+            h1 { font-size: 3.2rem; letter-spacing: 3px; }
+            p { font-size: 1.1rem; }
+            .icon-link { font-size: 55px; }
+            .icons-wrapper { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>LET'S TALK</h1>
+    <p>Click any icon to connect with me</p>
+
+    <div class="icons-wrapper">
+        <a href="https://www.linkedin.com/in/kareem-salama-628584398" target="_blank" class="icon-link"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/kareem-salama-portfolio" target="_blank" class="icon-link"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.facebook.com/karim.e.slama.2025" target="_blank" class="icon-link"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/kareem_x_8" target="_blank" class="icon-link"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/201155840474" target="_blank" class="icon-link"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:kareemslama300@gmail.com" class="icon-link"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <a href="../index.html" class="back-btn">
+       ← SYSTEM MAIN PAGE
+    </a>
+
+</body>
+</html>

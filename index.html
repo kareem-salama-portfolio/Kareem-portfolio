@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kareem Salama | AI & Cybersecurity Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        :root { --neon-green: #00ff9f; --dark-bg: #050505; }
+        body { background-color: var(--dark-bg); color: #e0e0e0; margin: 0; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
+        canvas { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.3; }
+
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 6%; background: rgba(0, 0, 0, 0.9); border-bottom: 1px solid var(--neon-green); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        nav h2 { color: var(--neon-green); font-size: 1.6rem; text-shadow: 0 0 10px var(--neon-green); margin: 0; }
+        nav ul { display: flex; list-style: none; gap: 30px; margin: 0; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        nav ul li a:hover { color: var(--neon-green); text-shadow: 0 0 15px var(--neon-green); }
+
+        /* Hero Section */
+        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; text-align: center; padding-top: 40px; }
+        .profile-img { width: 250px; height: 250px; border-radius: 50%; border: 3px solid var(--neon-green); box-shadow: 0 0 30px rgba(0, 255, 159, 0.4); margin-bottom: 20px; object-fit: cover; }
+        h1 { font-size: 3.8rem; color: #fff; text-shadow: 0 0 20px var(--neon-green); margin: 10px 0; letter-spacing: 3px; }
+        .hero p { font-size: 1.5rem; color: var(--neon-green); margin-bottom: 20px; font-family: 'Courier New', monospace; }
+
+        /* Terminal (Skills) */
+        .terminal { background: rgba(10, 10, 10, 0.9); border-left: 4px solid var(--neon-green); padding: 25px; max-width: 800px; margin: 20px auto; text-align: left; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .terminal p { font-family: 'Courier New', monospace; font-size: 1.1rem; margin: 8px 0; }
+
+        /* Grid System for Projects & Research */
+        section { padding: 40px 10%; }
+        .section-title { font-size: 2.2rem; color: var(--neon-green); text-align: center; margin-bottom: 30px; text-transform: uppercase; text-shadow: 0 0 10px var(--neon-green); }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: rgba(20, 20, 20, 0.8); border: 1px solid #333; padding: 20px; border-top: 3px solid var(--neon-green); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--neon-green); box-shadow: 0 0 20px rgba(0, 255, 159, 0.1); }
+        .card h3 { color: var(--neon-green); margin-top: 0; font-size: 1.3rem; }
+
+        /* Chatbot UI */
+        #chatbot { background: rgba(15, 15, 15, 0.95); border: 1px solid var(--neon-green); padding: 30px; max-width: 600px; margin: 40px auto; border-radius: 10px; text-align: center; }
+        #chatbot input { width: 80%; padding: 12px; background: #000; border: 1px solid #444; color: var(--neon-green); border-radius: 5px; outline: none; }
+        #chatbot button { padding: 12px 25px; background: var(--neon-green); border: none; font-weight: bold; cursor: pointer; margin-left: 10px; transition: 0.3s; }
+        #chatbot button:hover { box-shadow: 0 0 20px var(--neon-green); }
+        #answer { margin-top: 20px; font-style: italic; color: #fff; line-height: 1.5; }
+
+        /* Responsive */
+        @media (max-width: 768px) { h1 { font-size: 2.2rem; } .profile-img { width: 160px; height: 160px; } nav ul { display: none; } }
+    </style>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<nav>
+    <h2>KAREEM.SYS</h2>
+    <ul>
+        <li><a href="sections/about.html">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="sections/contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <img src="./profile.jpg.jpeg" alt="Kareem" class="profile-img">
+    <h1 data-aos="zoom-in">AI & Cybersecurity Engineer</h1>
+    <p>> Building Intelligent and Secure Systems</p>
+</section>
+
+<section class="terminal" data-aos="fade-right">
+    <p><span style="color: var(--neon-green);">visitor@kareem:~$</span> whoami</p>
+    <p>Cybersecurity & AI Student | Professional Network Designer</p>
+    <p><span style="color: var(--neon-green);">visitor@kareem:~$</span> ls skills/</p>
+    <p style="color: #fff;">[ C++ | Python | AI | Cisco_Packet_Tracer | HTML | JS ]</p>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Technical Projects</h2>
+    <div class="grid-container">
+        <div class="card" data-aos="fade-up">
+            <h3>Cisco Network Design</h3>
+            <p>Designed complex enterprise network topologies with VLANs, OSPF, and Firewall configurations.</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <h3>AI Password Analyzer</h3>
+            <p>Deep learning tool for real-time password strength evaluation and vulnerability prediction.</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <h3>Network Scanner</h3>
+            <p>Automated Python security tool for network discovery and vulnerability scanning.</p>
+        </div>
+    </div>
+</section>
+
+<section id="research">
+    <h2 class="section-title">Research</h2>
+    <div class="grid-container">
+        <div class="card" data-aos="fade-left">
+            <h3>Sign Language Translation</h3>
+            <p>Real-time system converting sign language into synthesized speech using CV.</p>
+        </div>
+        <div class="card" data-aos="fade-left">
+            <h3>Zero-Day Prediction</h3>
+            <p>Neural Network research focused on identifying anomalous behavior in secure traffic.</p>
+        </div>
+        <div class="card" data-aos="fade-left">
+            <h3>IoT Encryption</h3>
+            <p>Developing lightweight cryptographic protocols for secure IoT device communication.</p>
+        </div>
+    </div>
+</section>
+
+<section id="chatbot" data-aos="flip-up">
+    <h2 style="color: var(--neon-green);">Ask Kareem AI</h2>
+    <input id="question" placeholder="Ask me about Kareem's skills or projects...">
+    <button onclick="chat()">EXECUTE</button>
+    <p id="answer"></p>
+</section>
+
+<footer style="text-align: center; padding: 40px; border-top: 1px solid #222;">
+    <p>&copy; Kareem Salama 2026 | System Status: <span style="color: var(--neon-green);">Secure</span></p>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800 });
+
+    // Matrix Rain Effect
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const chars = "01";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+    function drawMatrix() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#0F0";
+        ctx.font = fontSize + "px monospace";
+        drops.forEach((y, i) => {
+            const text = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillText(text, i * fontSize, y * fontSize);
+            if (y * fontSize > canvas.height && Math.random() > 0.98) drops[i] = 0;
+            drops[i]++;
+        });
+    }
+    setInterval(drawMatrix, 50);
+
+    // AI Chatbot Logic with Voice (Text-to-Speech)
+    function chat() {
+        const q = document.getElementById("question").value.toLowerCase();
+        const a = document.getElementById("answer");
+        let response = "";
+
+        if (q.includes("skills") || q.includes("ما هي مهاراتك")) {
+            response = "Kareem is proficient in C++, Python, AI development, and Cisco network design.";
+        } else if (q.includes("projects") || q.includes("مشاريع")) {
+            response = "Kareem has built an AI Password Analyzer, a Network Scanner, and complex Cisco network topologies.";
+        } else if (q.includes("research") || q.includes("أبحاث")) {
+            response = "His latest research is a Real-Time sign language to speech translation system using Computer Vision.";
+        } else if (q.includes("who are you") || q.includes("من أنت")) {
+            response = "I am Kareem AI, an assistant representing Kareem Salama, an AI and Cybersecurity Engineer.";
+        } else {
+            response = "I'm not sure about that, but you can check Kareem's LinkedIn for more details!";
+        }
+
+        a.innerText = response;
+
+        // Voice Response
+        const speech = new SpeechSynthesisUtterance();
+        speech.text = response;
+        speech.volume = 1;
+        speech.rate = 1;
+        speech.pitch = 1;
+        window.speechSynthesis.speak(speech);
+    }
+</script>
+</body>
+</html>
